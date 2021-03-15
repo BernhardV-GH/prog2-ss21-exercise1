@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ResultTest {
+    // Link to Repository: https://github.com/BernhardV-GH/prog2-ss21-exercise1
+
     @Test
     @DisplayName("Constraints Test 1: n < 1")
     void constraintsTest1() {

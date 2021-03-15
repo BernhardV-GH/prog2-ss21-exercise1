@@ -1,10 +1,12 @@
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
+
 class ReaderTest {
+    // Link to Repository: https://github.com/BernhardV-GH/prog2-ss21-exercise1
+
     @Test
     @DisplayName("ReaderTest1: inputTest1: n")
     void readerTest1(){
