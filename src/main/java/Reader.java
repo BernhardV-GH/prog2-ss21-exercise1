@@ -31,7 +31,12 @@ public class Reader {
             input.add(Integer.parseInt(line));
         }
 
-        input.set(0, input.size()-1);
+        if(input.size() > 0){
+            input.set(0, input.size()-1);
+        }
+        else{
+            input.add(-1);
+        }
 
         return input;
     }
