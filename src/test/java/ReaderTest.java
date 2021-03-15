@@ -27,7 +27,7 @@ class ReaderTest {
     void readerTest3(){
         List inputTest1 = Reader.readFromInput("src/test/resources/inputTest2.txt");
         int actual = (int)inputTest1.get(0);
-        int expected = 0;
+        int expected = 10;
         assertEquals(actual,expected);
     }
     @Test
