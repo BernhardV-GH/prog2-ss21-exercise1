@@ -1,11 +1,8 @@
-import org.mockito.internal.matchers.Null;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Result {
+    // Link to Repository: https://github.com/BernhardV-GH/prog2-ss21-exercise1
     public static final int ROUNDINGBOUNDARY = 37;
     public static final int UPPERBOUNDARY = 60;
 
