@@ -91,4 +91,12 @@ public class ResultTest {
         List<Integer> expected = Arrays.asList(0,11,22,33,45,55,66,77,90,100,-1);
         assertEquals(expected, actual);
     }
+
+    @Test
+    @DisplayName("Array Length Test - testing if first entry is ignored as it should be")
+    void lengthTest(){
+        List<Integer> actual = Result.gradingStudents(Arrays.asList(11,39,69,99));
+        List<Integer> expected = Arrays.asList(40,70,100);
+        assertEquals(expected,actual);
+    }
 }

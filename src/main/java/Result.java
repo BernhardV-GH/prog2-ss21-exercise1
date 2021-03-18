@@ -10,9 +10,10 @@ public class Result {
     public static final int UPPERBOUNDARY = 60;
 
     public static List<Integer> gradingStudents(List<Integer> grades){
-        // This method takes a list of grades (first entry has to be the arraylength of the following entries)
+        // This method takes a list of grades (first entry is the arraylength of the following entries)
         // If the list is either too short or too long null an Exception is thrown otherwise the array is modified
-        // using modulo 5 as was specified. The first entry (n) is ignored/input is not trusted
+        // using modulo 5 as was specified. The first entry (n) is ignored/input is not trusted. .size() is used instead.
+        // invalid grades are marked as '-1' but they don't stop the grading process
 
         List<Integer> results = new ArrayList<>();
 
@@ -21,7 +22,7 @@ public class Result {
         }
 
         if (grades.isEmpty() || grades.size() < 2){
-            throw new IllegalArgumentException("given array of grades is either empty or too short (only 'n' entry)");
+            throw new IllegalArgumentException("given array of grades is either empty or too short (only first entry given)");
         }
         else if (grades.size() > UPPERBOUNDARY+1){
             throw new IllegalArgumentException("given array of grades is too long");
@@ -31,7 +32,7 @@ public class Result {
                 if(grade < 0 || grade > 100){
                     results.add(-1);
                 }
-                else if(grade > 0 && grade < ROUNDINGBOUNDARY){
+                else if(grade < ROUNDINGBOUNDARY){
                     results.add(grade);
                 }
                 else if( (5 - grade % 5) == 2){
