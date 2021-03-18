@@ -18,7 +18,6 @@ public class ResultTest {
         List<Integer> expected = null;
         assertEquals(expected, actual);
     }
-
     @Test
     @DisplayName("Constraints Test 2: n < 0")
     void constraintsTest2() {
@@ -30,7 +29,6 @@ public class ResultTest {
         List<Integer> expected = null;
         assertEquals(expected, actual);
     }
-
     @Test
     @DisplayName("Constraints Test 3: n > 60")
     void constraintsTest3() {
@@ -43,7 +41,6 @@ public class ResultTest {
         List<Integer> expected = null;
         assertEquals(expected, actual);
     }
-
     @Test
     @DisplayName("Constraints Test 4: grades[i] < 0 || grades [i] > 100")
     void constraintsTest4() {
@@ -66,6 +63,13 @@ public class ResultTest {
 
         assertEquals(expected, actual);
     }
+    @Test
+    @DisplayName("Constraints Test 5: parameter 'grades' given is null")
+    void constraintsTest5() {
+        List<Integer> actual = Result.gradingStudents(null);
+        List<Integer> expected = null;
+        assertEquals(expected, actual);
+    }
 
     @Test
     @DisplayName("Grading Test 1 - no rounding < 40")
@@ -82,12 +86,11 @@ public class ResultTest {
         input.add(38);
         input.add(9);
         input.add(0);
-        List<Integer> expected = input;
-        expected.remove(0);
 
         List<Integer> actual = Result.gradingStudents(input);
+        input.remove(0);
 
-        assertEquals(expected, actual);
+        assertEquals(input, actual);
     }
 
     @Test
@@ -101,12 +104,11 @@ public class ResultTest {
         input.add(75);
         input.add(86);
         input.add(97);
-        List<Integer> expected = input;
-        expected.remove(0);
 
         List<Integer> actual = Result.gradingStudents(input);
+        input.remove(0);
 
-        assertEquals(expected, actual);
+        assertEquals(input, actual);
     }
 
     @Test
